@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Calc</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="max-w-screen-xl mx-auto mt-5 h-[100px] bg-slate-400 flex rounded-xl">
+            <div class="flex-1 flex items-center">
+                <div class="p-5">
+                    <h2 class="text-3xl">Interactive</h2>
+                    <p class="text-xl">Geometry Genius</p>
+                </div>
+            </div>
+            <div class="flex-1 flex justify-end items-center">
+                <div class="p-5">
+                    <button class="text-xl text-white btn btn-success">Blog</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-screen-xl mx-auto">
+        <div class="my-5 w-full h-auto grid grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card w-auto bg-base-100 shadow-xl">
+                <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                    <h2 class="text-xl lg:text-2xl font-semibold">Triangle</h2>
+                    <p class="text-sm lg:text-lg">Area(A) = 0.5xbxh</p>
+                    <div>
+                        <input type="text" class="w-20 bg-slate-300 mx-2 pl-2" placeholder="b" name="" id=""> cm <input
+                            type="text" class="w-20 bg-slate-300 mx-2 pl-2" placeholder="h" name="" id="">cm
+                    </div>
+                    <div class="card-actions justify-center mt-5">
+                        <button class="btn btn-outline btn-primary lg:btn-wide">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-auto bg-base-100 shadow-xl">
+                <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                    <h2 class="text-xl lg:text-2xl font-semibold">Rectangle</h2>
+                    <p class="text-sm lg:text-lg">Area(A) = 0.5xwxi</p>
+                    <div>
+                        <input type="text" class="w-20 bg-slate-300 mx-2 pl-2" placeholder="w" name="" id=""> cm <input
+                            type="text" class="w-20 bg-slate-300 mx-2 pl-2" placeholder="i" name="" id="">cm
+                    </div>
+                    <div class="card-actions justify-center mt-5">
+                        <button class="btn btn-outline btn-primary lg:btn-wide">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-auto bg-base-100 shadow-xl">
+                <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                    <h2 class="text-lg lg:text-2xl font-semibold">Parallelogram</h2>
+                    <p class="text-sm lg:text-lg">Area(A) = bxh</p>
+                    <div>
+                        <input type="text" class="w-20 bg-slate-300 mx-2 pl-2" placeholder="b" name="" id=""> cm <input
+                            type="text" class="w-20 bg-slate-300 mx-2 pl-2" placeholder="h" name="" id="">cm
+                    </div>
+                    <div class="card-actions justify-center mt-5">
+                        <button class="btn btn-outline btn-primary lg:btn-wide">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-auto bg-base-100 shadow-xl">
+                <figure><img src="./images/rhombus.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                    <h2 class="text-2xl font-semibold">Rhombus</h2>
+                    <p>Area(A) = 0.5xd<sub>1</sub>xd<sub>2</sub></p>
+                    <div>
+                        <input type="text" class="w-20 bg-slate-300 mx-2 pl-2" placeholder="d1" name="" id=""> cm <input
+                            type="text" class="w-20 bg-slate-300 mx-2 pl-2" placeholder="d2" name="" id="">cm
+                    </div>
+                    <div class="card-actions justify-center mt-5">
+                        <button class="btn btn-outline btn-primary lg:btn-wide">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-auto bg-base-100 shadow-xl">
+                <figure><img src="./images/pentagon.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                    <h2 class="text-2xl font-semibold">Pentagon</h2>
+                    <p>Area(A) = 0.5xpxb</p>
+                    <div>
+                        <input type="text" class="w-20 bg-slate-300 mx-2 pl-2" placeholder="p" name="" id=""> cm <input
+                            type="text" class="w-20 bg-slate-300 mx-2 pl-2" placeholder="b" name="" id="">cm
+                    </div>
+                    <div class="card-actions justify-center mt-5">
+                        <button class="btn btn-outline btn-primary lg:btn-wide">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-auto bg-base-100 shadow-xl">
+                <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
+                <div class="card-body text-center">
+                    <h2 class="text-2xl font-semibold">Ellipse</h2>
+                    <p>Area(A) = 3.1416xaxb</p>
+                    <div>
+                        <input type="text" class="w-20 bg-slate-300 mx-2 pl-2" placeholder="a" name="" id=""> cm <input
+                            type="text" class="w-20 bg-slate-300 mx-2 pl-2" placeholder="b" name="" id="">cm
+                    </div>
+                    <div class="card-actions justify-center mt-5">
+                        <button class="btn btn-outline btn-primary lg:btn-wide">Calculate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
